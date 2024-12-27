@@ -1,0 +1,299 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Roboto;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.6);
+    background-image: url('background-netflix-image.jpg');
+    background-blend-mode: darken;
+}
+.nav {
+    display: flex;
+    margin-top: 40px;
+    margin-left: 10rem;
+    padding: 10px; 
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+@media (max-width: 768px) {
+    .nav {
+        margin-left: 1rem; /* Adjust margin for smaller screens */
+    }
+    .logo-image {
+        max-width: 7rem; /* Reduce max size for smaller displays */
+    }
+}
+
+.logo-image {
+    width: 9.76rem;
+    color: rgb(229, 9, 20);
+    display: block;
+}
+.one {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.two{
+    background-color: black;
+    width: 350px;
+    height: 70vh;
+    opacity: 0.7;
+    color: white;
+    padding: 60px;
+    margin-top: 1rem;
+}
+h1 {
+    margin-bottom: 15px;
+}
+.input-fields {
+    position: relative;
+}
+.inp{
+    width: 93%;
+    padding: 20px;
+    border: none;
+    background: transparent;
+    border: 1px solid grey;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.label{
+    position: absolute;
+    left: 10px;
+    top: 16px;
+    pointer-events: none;
+    margin-top: 7px;
+    transition: 0.2s;
+    cursor:pointer
+}
+.input-fields .inp:focus ~ label,
+.input-fields .inp:valid ~ label{
+    top: -6px;
+    left: 10px;
+    font-size: 13.5px;  
+    padding-bottom: 10px; 
+
+}
+.sign-up-button {
+    border: none;
+    background-color:rgb(229, 9, 20);
+    color: white;
+    padding: 16px;
+    width: 368px;
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.p{
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: rgb(223, 210, 210);
+    cursor: pointer;
+}
+.sign-up-code {
+    border: none;
+    background-color: rgb(143, 138, 138);
+    padding: 16px;
+    width: 368px;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    border-radius: 4px;
+}
+.sub {
+    display:flex;
+    align-items: center;
+}
+.ui-checkbox {
+    --primary-color: white;
+    --secondary-color: black;
+    /* checkbox */
+    --checkbox-diameter: 20px;
+    --checkbox-border-radius: 5px;
+    --checkbox-border-color: #d9d9d9;
+    --checkbox-border-width: 1px;
+    --checkbox-border-style: solid;
+    /* checkmark */
+    --checkmark-size: 1.2;
+    margin-right: 10px;
+  }
+  
+  .ui-checkbox, 
+  .ui-checkbox *, 
+  .ui-checkbox *::before, 
+  .ui-checkbox *::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  .ui-checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: var(--checkbox-diameter);
+    height: var(--checkbox-diameter);
+    border-radius: var(--checkbox-border-radius);
+    background: var(--secondary-color);
+    border: var(--checkbox-border-width) var(--checkbox-border-style) var(--checkbox-border-color);
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .ui-checkbox::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-box-shadow: 0 0 0 calc(var(--checkbox-diameter) / 2.5) var(--primary-color);
+    box-shadow: 0 0 0 calc(var(--checkbox-diameter) / 2.5) var(--primary-color);
+    border-radius: inherit;
+    opacity: 0;
+    -webkit-transition: all 0.5s cubic-bezier(0.12, 0.4, 0.29, 1.46);
+    -o-transition: all 0.5s cubic-bezier(0.12, 0.4, 0.29, 1.46);
+    transition: all 0.5s cubic-bezier(0.12, 0.4, 0.29, 1.46);
+  }
+  
+  .ui-checkbox::before {
+    top: 40%;
+    left: 50%;
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 7px;
+    border-right: 2px solid var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(0);
+    -ms-transform: translate(-50%, -50%) rotate(45deg) scale(0);
+    transform: translate(-50%, -50%) rotate(45deg) scale(0);
+    opacity: 0;
+    -webkit-transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6),opacity 0.1s;
+    -o-transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6),opacity 0.1s;
+    transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6),opacity 0.1s;
+  }
+  
+  /* actions */
+  
+ 
+  
+  .ui-checkbox:checked {
+    background: var(--primary-color);
+    border-color: transparent;
+  }
+  
+  .ui-checkbox:checked::before {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(var(--checkmark-size));
+    -ms-transform: translate(-50%, -50%) rotate(45deg) scale(var(--checkmark-size));
+    transform: translate(-50%, -50%) rotate(45deg) scale(var(--checkmark-size));
+    -webkit-transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+    -o-transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+    transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+}
+
+.pp {
+    margin-top: 10px;
+    cursor: pointer;
+}
+.info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+}
+.pp {
+    font-weight: 400;
+    font-size: 1rem;
+    color: grey;
+}
+.anchored {
+   margin-left: 10px;
+   font-size: 20px;
+   color: white;
+   text-decoration: none;
+}
+.anchored:hover {
+    text-decoration: underline;
+}
+.last-paragraph {
+    color: grey;
+    margin-top: 20px;
+    width: 300px;
+    font-size: 14px;
+}
+span {
+    color: blue;
+}
+.ul {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+    margin-bottom: 10px;
+    
+}
+.ul-2 {
+    display: flex;
+    align-items: center;
+    
+}
+.li {
+    color: grey;
+    text-decoration: underline;
+}
+.li-2{
+    color: grey;
+    text-decoration: underline;
+    margin-right: 105px;
+}
+li::marker {
+    content: '';
+}
+.contact {
+    margin-bottom: 30px;
+    color: rgb(208, 194, 194);
+}
+.g {
+    color:grey;
+}
+.an {
+    color: grey;
+    text-decoration: none;
+}
+.an:hover {
+    text-decoration: underline;
+}
+footer {
+    padding: 15vh;
+}
+.lang {
+    margin-top: 30px;
+}
+select{
+    border: 1px solid grey;
+    color: white;
+    background-color: transparent;
+    padding: 7px;
+    border-radius: 4px;
+}
+option {
+    color: black;
+}
+
+
