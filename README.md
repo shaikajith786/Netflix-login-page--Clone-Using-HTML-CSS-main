@@ -1,4 +1,4 @@
-- 👋 Hi, I’m @Vijay7123
+- 👋 Hi, I’m @zith786
 - 👀 I’m interested in web dev
 - 🌱 I’m currently learning web development full stack
 - 💞️ I’m looking to collaborate with new people
